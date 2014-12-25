@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>CreateClass</h1>
+	<form method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		<label>Title Class</label>
+		{{ form.title }}
+		<label>Address</label>
+		{{ form.address }}
+		<label>Date</label>
+		{{ form.date }}
+		<label>Time</label>
+		{{ form.time }}
+		{% if user.premium %}
+			<label>Image</label>
+			{{ form.image }}
+		{% endif %}
+		<label>Description</label>
+		{{ form.description }}
+		<input type="submit" value="Post Class">
+	</form>
+</body>
+</html>

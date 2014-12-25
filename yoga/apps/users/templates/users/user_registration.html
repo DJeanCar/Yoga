@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Hola</h1>
+	<form method="POST">
+		{% csrf_token %}
+		{{form.as_p}}
+		<label>Teacher</label>
+		<input type="checkbox" name="teacher">
+		<label>Student</label>
+		<input type="checkbox" name="student">
+		<input type="submit" value="Register">
+	</form>
+</body>
+</html>
