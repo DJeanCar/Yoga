@@ -1,5 +1,5 @@
-import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+from unipath import Path
+BASE_DIR = Path(__file__).ancestor(3)
 
 SECRET_KEY = ')(lbipuf=amwpdn5n!%f@na%i#=_#e@2x+h68!1((q^ru_bti$'
 

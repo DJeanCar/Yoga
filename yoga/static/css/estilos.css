@@ -1,0 +1,179 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+.lasted-subtitle {
+  font-weight: 900;
+  font-size: 1.4em;
+}
+.inner-both-btn {
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  padding-right: 1em;
+  padding-left: 1.2em;
+}
+.inner-both-2 {
+  padding-bottom: 2em;
+  padding-top: 2em;
+}
+.btn-sm-customize {
+  padding: 6px 20px;
+}
+.btn-warning-customize {
+  border-bottom: 3px solid #eea236;
+}
+.btn-info-customize {
+  border-bottom: 3px solid #46b8da;
+}
+.btn-md-customize {
+  border-radius: 3px;
+  padding: 0.2em 1.2em;
+  font-size: 1.3em;
+}
+.btn-search {
+  border-radius: 50px;
+}
+#subheader {
+  height: 80px;
+}
+.lasted-subtitle {
+  margin-right: 10px;
+}
+.padding-left-4 {
+  padding-left: 4em;
+}
+.grid-20 {
+  width: 21%;
+  padding-right: 1.2em;
+}
+.grid-80 {
+  width: 79%;
+  padding-left: 1.2em;
+}
+.grid-80,
+.grid-20 {
+  float: left;
+  box-sizing: border-box;
+}
+.grid-25 {
+  width: 25%;
+  float: left;
+  padding-right: 0.8em;
+}
+.row-customize {
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 15px;
+}
+.btn-alizarin {
+  background-color: #c0392b;
+}
+.btn-orange {
+  background-color: #f39c12;
+}
+.color-white {
+  color: #fff;
+}
+.color-asbestos {
+  color: #7f8c8d;
+}
+.color-silver {
+  color: #bdc3c7;
+}
+.color-carrot {
+  color: #e67e22;
+}
+#header {
+  background: url("../img/yoga-alliance.jpg") center;
+  background-size: cover;
+  height: 400px;
+}
+.navbar-default {
+  padding: 1em 0;
+  background-color: #000;
+  border-color: rgba(231,231,231,0);
+}
+.navbar-default .navbar-nav>li>a {
+  color: #c4cccf;
+  font-weight: bold;
+  font-size: 15px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+.navbar {
+  margin-bottom: 0;
+}
+.btn-sm {
+  border-radius: 2px;
+  font-weight: bold;
+}
+.form-control {
+  border-radius: 50px;
+  border-right: 0px;
+}
+.panel {
+  border: 2px solid #ddd;
+  margin-bottom: 12px;
+}
+.panel-heading {
+  padding: 3px 15px;
+  border: 0;
+}
+.title-class-day-free {
+  color: #d35400;
+  font-size: 1.4em;
+}
+.title-class {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #000;
+}
+.teacher-class {
+  font-size: 0.9em;
+}
+.hour-class {
+  font-size: 1.7em;
+  color: #000;
+}
+.text-class {
+  padding: 1.2em 0;
+  font-size: 0.9em;
+}
+.location-class {
+  font-size: 0.9em;
+  float: right;
+}
+.panel-default-premium {
+  border-color: #000 !important;
+}
+.panel-heading-premium {
+  background-color: #f00 !important;
+}
+.title-class-day-premium {
+  color: #fff;
+  font-size: 1.4em;
+}
+.img-class-premium {
+  background: url("../img/yoga.jpg") center;
+  height: 130px;
+  margin-top: 0.8em;
+  background-size: cover;
+}
+.panel-body-customize {
+  padding-left: 0;
+  padding-right: 0;
+}
+.margin-both {
+  margin-left: 15px;
+  margin-right: 15px;
+}
