@@ -3,6 +3,9 @@ from .base import *
 DEBUG = True
 TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
+
+TEMPLATE_DIRS = [BASE_DIR.child('templates')]
+
 '''
 DATABASES = {
     'default': {

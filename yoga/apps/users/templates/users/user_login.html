@@ -1,15 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<h1>Login</h1>
-	<form method="POST">
-		{% csrf_token %}
-		{{form.as_p}}
-		<input type="submit" value="Log in">
-	</form>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% load static from staticfiles %}
+
+{% block style %}
+
+<style type="text/css">
+	
+	#subheader{
+		padding-top: 80px;
+	}
+
+	.panel-default{
+		border-color: rgba(221, 221, 221, 0);
+		border-radius: 0;
+		background-color: #ecf0f1;
+	}
+
+	.margen-footer{
+		margin-top: 20em;
+	}
+
+</style>
+
+{% endblock %}
+
+{% block main %}
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 inner-both-lr">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h2 class="text-center inner-both-1 color-asbestos"><b>Login<b></h2>
+						<form method="POST">
+							{% csrf_token %}
+							<div class="col-md-8 col-md-offset-2">
+								<div class="form-group">
+								    <input class="form-control form-control-customize-2" id="id_name" name="email" placeholder="E-mail">
+								</div>
+								<div class="form-group">
+								    <input class="form-control form-control-customize-2" id="id_password" name="password" placeholder="Password">
+								</div>
+							</div>
+							<div class="col-md-10 col-md-offset-1">
+								<div class="text-center">
+									<input type="submit" class="btn btn-warning btn-lg btn-lg-customize margen-top-1" value="LOGIN">
+								</div>
+								<div class="forgot">
+									Forgot your Password?
+								</div>
+							</div>
+						</form>
+						<div class="col-md-12 text-center inner-both-2">
+							Do not have an account? <span class="color-alizarin">Sign up now!</span>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+{% endblock %}
