@@ -19,6 +19,16 @@ build
 # Logs:
 *.log
 
+# Archivos Media:
+media
+
+#MANAGE.PY
+yoga/manage.py
+
+#wsgi
+yoga/yoga/wsgi.py
+
+
 
 # MIGRACIONES
 yoga/apps/users/migrations/*
