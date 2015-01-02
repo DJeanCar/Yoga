@@ -1,19 +1,82 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<h1>Hola</h1>
-	<form method="POST">
-		{% csrf_token %}
-		{{form.as_p}}
-		<label>Teacher</label>
-		<input type="checkbox" name="teacher">
-		<label>Student</label>
-		<input type="checkbox" name="student">
-		<input type="submit" value="Register">
-	</form>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% load static from staticfiles %}
+
+{% block style %}
+
+<style type="text/css">
+	
+	#subheader{
+		padding-top: 80px;
+	}
+
+	.panel-default{
+		border-color: rgba(221, 221, 221, 0);
+		border-radius: 0;
+		background-color: #ecf0f1;
+	}
+
+	.margen-footer{
+		margin-top: 20em;
+	}
+
+</style>
+
+{% endblock %}
+
+{% block main %}
+<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 inner-both-lr">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h2 class="text-center inner-both-1 color-asbestos"><b>Register<b></h2>
+						<form method="POST">
+							{% csrf_token %}
+							<div class="col-md-10 col-md-offset-1">
+								<div class="form-group">
+									{{ form.full_name }}
+								    {{ form.full_name.errors }}
+								</div>
+								<div class="form-group">
+									{{ form.email }}
+								    {{ form.email.errors }}
+								</div>
+								<div class="form-group">
+									{{ form.password }}
+									{{ form.password.errors }}
+								</div>
+								<div class="form-group">
+									{{ form.location }}
+								    {{ form.location.errors }}
+								</div>
+							</div>
+							<div class="col-md-10 col-md-offset-1">
+								
+								<div class="radio">
+								  <span class="font-size-1">I am a:&nbsp;&nbsp;&nbsp;&nbsp;</span>
+								  <label>
+								    <input type="radio" name="teacher" id="optionsRadios1" value="option1">
+								    Teacher
+								  </label>
+								  <label>
+								    <input type="radio" name="student" id="optionsRadios1" value="option1">
+								    Student
+								  </label>
+								</div>
+							</div>
+							<div class="col-md-10 col-md-offset-1 text-center">
+								<input type="submit" class="btn btn-danger btn-lg btn-lg-customize margen-top-1 margen-bottom-1" value="REGISTER">
+							</div>
+						</form>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+
+
+{% endblock %}

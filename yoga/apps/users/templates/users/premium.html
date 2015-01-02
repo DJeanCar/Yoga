@@ -1,11 +1,143 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<h1>Conviertete en usuario premium</h1>
-	<a href="/paypal/create/">Pagar con Paypal</a>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% load static from staticfiles %}
+
+{% block style %}
+
+<style type="text/css">
+	
+	#subheader{
+		padding-top: 80px;
+	}
+
+	.margen-footer{
+		margin-top: 20em;
+	}
+
+</style>
+
+{% endblock %}
+
+{% block main %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1">
+				<h2 class="text-center color-asbestos"><b>Free Yoga Membership</b></h2>
+				<p class="text-center color-asbestos" style="font-size:1.1em">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-10 col-md-offset-1 margen-top-1">
+				<table class="table table-bordered">
+					
+						<tr>
+							<th></th>
+							<th class="text-center free-table color-asbestos">
+								<p class="font-size-2">FREE</p>
+								<p><span class="font-size-2">$0</span>.00</p>
+								<p class="normal">month</p>
+							</th>
+							<th class="text-center premium-table">
+								<p class="font-size-2">PREMIUM</p>
+								<p><span class="font-size-2">$9</span>.90</p>
+								<p class="normal">month</p>
+							</th>
+						</tr>
+					
+					
+						<tr>
+							<td class="width-1"><div class="padding-both"><b>Teachers</b></div></td>
+							<td class="width-2"> 
+								<div class="panel panel-default panel-customize">
+									<div class="panel-body text-center">
+										<b>Current Plan</b>
+									</div>
+								</div>
+							</td>
+							<td class="text-center">
+								<div style="padding-top:0.7em">
+									<a href="/paypal/create/" class="btn btn-warning btn-warning-customize-1 btn-md">Upgrade</a>
+								</div>
+							</td>
+						</tr>
+						<tr >
+							<td> <div class="padding-both">Monthy posts</div></td>
+							<td class="text-center"><div class="padding-both">10</div></td>
+							<td class="text-center"><div class="padding-both">Unlimited</div></td>
+						</tr>
+						<tr>
+							<td><div class="padding-both">Profile pictures gallery</div></td>
+							<td class="text-center"><div class="padding-both"><span class="glyphicon glyphicon-remove color-asbestos"></span></div></td>
+							<td class="text-center"><div class="padding-both"><span class="glyphicon glyphicon-ok color-premium"></span></div></td>
+						</tr>
+						<tr >
+							<td><div class="padding-both">Post with pictures</div></td>
+							<td class="text-center"><div class="padding-both"><span class="glyphicon glyphicon-remove color-asbestos"></span></div></td>
+							<td class="text-center"><div class="padding-both"><span class="glyphicon glyphicon-ok color-premium"></span></div></td>
+						</tr>
+						<tr>
+							<td><div class="padding-both">Other</div></td>
+							<td class="text-center"><div class="padding-both"><span class="glyphicon glyphicon-remove color-asbestos"></span></div></td>
+							<td class="text-center"><div class="padding-both"><span class="glyphicon glyphicon-ok color-premium"></span></div></td>
+						</tr>
+						<tr>
+							<td><div class="padding-both">Other</div></td>
+							<td class="text-center"><div class="padding-both"><span class="glyphicon glyphicon-remove color-asbestos"></span></div></td>
+							<td class="text-center"><div class="padding-both"><span class="glyphicon glyphicon-ok color-premium"></span></div></td>
+						</tr>
+					
+				</table>
+				<div style="font-size:0.8em">Prices displayed in: USD</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1 margen-top-1" style="margin-top:3em">
+				<div class="row">
+					<div class="col-lg-6">
+						<h4><b>Why to Upgrade Membership?</b></h4>
+						<p  class="margen-top-1">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum
+						</p>
+					</div>
+					<div class="col-lg-6">
+						<div class="panel panel-default panel-customize">
+							<div class="panel-body">
+								<h4><b>Not sure if upgrading plan?</b></h4>
+								<p class="margen-top-1">get in touch with us in: <span style="color:blue">contact@freeyoga.com</span></p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="row margen-top-1" style="margin-top:3em">
+					<div class="col-lg-6 ">
+						<h4><b>Can I switch my plan?</b></h4>
+						<p class="margen-top-1">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum
+						</p>
+					</div>
+					<div class="col-lg-6">
+						<h4><b>Can I cancel my membership?</b></h4>
+						<p class="margen-top-1">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+{% endblock %}

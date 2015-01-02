@@ -34,6 +34,8 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+TEMPLATE_DIRS = [BASE_DIR.child('templates')]
+
 AUTH_USER_MODEL = 'users.User'
 
 AUTHENTICATION_BACKENDS = (

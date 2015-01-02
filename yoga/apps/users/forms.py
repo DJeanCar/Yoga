@@ -23,22 +23,27 @@ class UserRegistrationForm(forms.ModelForm):
 		widgets = {
 			'full_name' : forms.TextInput(attrs = 
 				{
-				'class' : 'form-control', 
+					'type' : 'text',
+					'class' : 'form-control form-control-customize-2', 
+					'placeholder' : 'Full Name'
 				}),
 			'email' : forms.TextInput(attrs = 
 				{
-				'type' : 'email',
-				'class' : 'form-control',
+					'type' : 'email',
+					'class' : 'form-control form-control-customize-2',
+					'placeholder' : 'E-mail'
 				}),
 			'password' : forms.TextInput(attrs = 
 				{
-				'type' : 'password',
-				'class' : 'form-control',
+					'type' : 'password',
+					'class' : 'form-control form-control-customize-2',
+					'placeholder' : 'Password'
 				}),
 			'location' : forms.TextInput(attrs = 
 				{
-				'type' : 'text',
-				'class' : 'form-control',
+					'type' : 'text',
+					'class' : 'form-control form-control-customize-2',
+					'placeholder' : 'Location'
 				})
 		}	
 

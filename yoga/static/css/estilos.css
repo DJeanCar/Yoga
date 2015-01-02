@@ -25,8 +25,27 @@ h6 {
   padding-bottom: 2em;
   padding-top: 2em;
 }
+.inner-both-1{
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.inner-both-lr{
+  padding-right: 60px;
+  padding-left: 60px;
+}
+.margen-top-1{
+  margin-top: 1em;
+}
+.margen-bottom-1{
+  margin-bottom: 1em;
+}
 .btn-sm-customize {
   padding: 6px 20px;
+}
+.btn-lg-customize{
+  padding: 10px 48px;
+  border-radius: 2px;
+  font-weight: bold;
 }
 .btn-warning-customize {
   border-bottom: 3px solid #eea236;
@@ -81,11 +100,17 @@ h6 {
 .btn-orange {
   background-color: #f39c12;
 }
+.color-alizarin{
+  color: #e74c3c;
+}
 .color-white {
   color: #fff;
 }
 .color-asbestos {
   color: #7f8c8d;
+}
+.color-premium{
+  color: #F7A900;
 }
 .color-silver {
   color: #bdc3c7;
@@ -117,9 +142,17 @@ h6 {
   border-radius: 2px;
   font-weight: bold;
 }
-.form-control {
+.form-control-customize {
   border-radius: 50px;
   border-right: 0px;
+}
+.form-control-customize-2{
+  border-radius: 2px;
+  height: 44px;
+}
+.form-control-customize-2:focus{
+  border: 1.5px solid black;
+  border-radius: 2px;
 }
 .panel {
   border: 2px solid #ddd;
@@ -128,6 +161,10 @@ h6 {
 .panel-heading {
   padding: 3px 15px;
   border: 0;
+}
+.panel-customize{
+  background-color: #ddd;
+  margin-bottom: 0;
 }
 .title-class-day-free {
   color: #d35400;
@@ -176,4 +213,40 @@ h6 {
 .margin-both {
   margin-left: 15px;
   margin-right: 15px;
+}
+.forgot{
+  position: relative;
+  top: -30px;
+  right: -360px;
+  font-size: 0.9em;
+}
+.font-size-1{
+  font-size: 1.2em;
+}
+.font-size-2{
+  font-size: 1.5em;
+}
+.free-table{
+  background-color: #ecf0f1;
+}
+.normal{
+  font-weight: normal;
+}
+.premium-table{
+  background-color: #F7A900;
+  color: #fff;
+}
+.padding-both{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.width-1{
+  width: 210px !important;
+}
+.width-2{
+  width: 270px !important;
+}
+#footer{
+  padding: 0.5em 1em;
+  background-color: black;
 }
