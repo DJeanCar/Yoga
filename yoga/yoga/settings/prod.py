@@ -16,7 +16,7 @@ DATABASES = {
 }
 
 
-STATIC_URL = 'http://104.131.185.89/static/'
+STATIC_URL = 'http://104.131.185.89/static_prod/'
 MEDIA_URL = 'http://104.131.185.89/media/'
-STATIC_ROOT = BASE_DIR.child('static')
+STATIC_ROOT = BASE_DIR.child('static_prod')
 MEDIA_ROOT = BASE_DIR.child('media')
