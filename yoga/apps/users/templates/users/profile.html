@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block style %}
+
+<style type="text/css">
+	
+	#subheader{
+		padding-top: 80px;
+	}
+
+	.panel-default{
+		border-color: rgba(221, 221, 221, 0);
+		border-radius: 0;
+		background-color: #ecf0f1;
+	}
+
+	.margen-footer{
+		margin-top: 0em;
+	}
+
+</style>
+
+{% endblock %}
+
+{% block login %}
+
+{% if user.is_authenticated %}
+	<div class="user-login" >
+		<img src="{{MEDIA_URL}}{{user.avatar}}" class="img-circle" id="popover" data-container="body" data-toggle="popover" data-placement="bottom">
+		<a href="#" style="color:#B8CF2A;"><b>{{ user.full_name }}</b></a>
+	</div>
+   
+{% else %}
+	<div >
+		<a href="/login" class="btn btn-orange btn-sm btn-sm-customize color-white">Login</a>
+		<a href="/register" class="btn btn-alizarin btn-sm btn-sm-customize color-white">Register</a>
+	</div>
+    
+{% endif %}
+
+{% endblock %}
+
+{% block main %}
+
+{% if user.student %}
+	<div class="container" style="width:99.9%">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="media">
+				  <a class="media-left" href="#">
+				    <img src="{{MEDIA_URL}}{{user.avatar}}" class="img-circle avatar-profile">
+				  </a>
+				  <div class="media-body">
+				    <h4 class="media-heading"><b>{{user.full_name}}</b><span class="edit">[edit profile]</span></h4>
+				    <p>STUDENT</p>
+				  </div>
+				</div>
+				<div>
+					<p class="margen-top-1">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.
+					</p>
+					<p class="margen-top-1">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur.
+					</p>
+				</div>
+			</div>
+			<div class="col-md-8 col-profile">
+				<h2><b>FOLLOW TO:</b></h2>
+				<div class="row">
+					<div class="grid-follow">
+						<img src="asd.jpg" class="img-circle" style="width:100%">
+					</div>
+					<div class="grid-follow">
+						<img src="asd.jpg" class="img-circle" style="width:100%">
+					</div>
+					<div class="grid-follow">
+						<img src="asd.jpg" class="img-circle" style="width:100%">
+					</div>
+					<div class="grid-follow">
+						<img src="asd.jpg" class="img-circle" style="width:100%">
+					</div>
+					<div class="grid-follow">
+						<img src="asd.jpg" class="img-circle" style="width:100%">
+					</div>
+					<div class="grid-follow">
+						<img src="asd.jpg" class="img-circle" style="width:100%">
+					</div>
+					<div class="grid-follow">
+						<img src="asd.jpg" class="img-circle" style="width:100%">
+					</div>
+					<div class="grid-follow">
+						<img src="asd.jpg" class="img-circle" style="width:100%">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% else %}
+	no
+{% endif %}
+
+{% endblock %}

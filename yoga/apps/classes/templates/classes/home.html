@@ -10,6 +10,26 @@
 {% block subtitle %}
 <span class="color-asbestos lasted-subtitle">LASTED CLASS</span>
 {% endblock %}
+
+{% block login %}
+
+{% if user.is_authenticated %}
+  <div class="user-login" >
+    <img src="{{MEDIA_URL}}{{user.avatar}}" class="img-circle" id="popover" data-container="body" data-toggle="popover" data-placement="bottom">
+    <a href="#" style="color:#B8CF2A;"><b>{{ user.full_name }}</b></a>
+  </div>
+   
+{% else %}
+  <div >
+    <a href="/login" class="btn btn-orange btn-sm btn-sm-customize color-white">Login</a>
+    <a href="/register" class="btn btn-alizarin btn-sm btn-sm-customize color-white">Register</a>
+  </div>
+    
+{% endif %}
+
+
+{% endblock %}
+
         
 {% block main %}
         <section>
@@ -473,6 +493,19 @@
             </div>
           </div>
         </section>
+
+{% endblock %}
+
+{% block js %}
+
+<script type="text/javascript">
+  // Using Masonry to adjustable columns
+  var container = document.querySelector('#contenedor');
+
+  var msnry = new Masonry( container, {
+    itemSelector: '.grid-25'
+  });
+</script>
 
 {% endblock %}
 

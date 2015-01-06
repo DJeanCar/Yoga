@@ -70,6 +70,12 @@ h6 {
 .padding-left-4 {
   padding-left: 4em;
 }
+.grid-follow{
+  width: 12.5%;
+  float: left;
+  padding-left: 16px;
+  padding-right: 16px;
+}
 .grid-20 {
   width: 21%;
   padding-right: 1.2em;
@@ -226,6 +232,9 @@ h6 {
 .font-size-2{
   font-size: 1.5em;
 }
+.font-size-peq{
+  font-size: 0.8em;
+}
 .free-table{
   background-color: #ecf0f1;
 }
@@ -249,4 +258,86 @@ h6 {
 #footer{
   padding: 0.5em 1em;
   background-color: black;
+}
+.user-login{
+  margin-top: 5px;
+  width: 135px;
+}
+.user-login>a{
+  text-decoration: none;
+  float: right;
+}
+.user-login>a:hover{
+  color: #e67e22;
+}
+.user-login>img{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 6px;
+}
+.popover{
+  border: 0px;
+  top: 69px !important;
+  padding: 0;
+  color: black;
+  position: fixed;
+}
+.popover-title, .popover-content{
+  background-color: #B8CF2A;
+}
+.popover-title{
+  border-bottom: 0px;
+}
+.popover-content{
+  border-radius: 0px 0px 6px 6px;
+  padding: 5px;
+}
+
+.popover.bottom>.arrow:after {
+  border-bottom-color: #B8CF2A;
+}
+.list-profile{
+  margin: 0;
+  padding: 0;
+}
+.list-profile>li:hover{
+  background-color: #DEE89C;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.list-profile>li{
+  list-style: none;
+  text-align: center;
+  font-size: .9em;
+  padding: .4em 7em;
+  
+}
+.list-profile>li>a{
+  color: black !important;
+  text-decoration: none;
+}
+.list-profile>li>a:hover{
+  color: black !important;
+}
+.avatar-profile{
+  width: 140px;
+  height: 140px;
+  border: 4px solid black;
+}
+.col-profile{
+  border-left: 1px solid #bdc3c7;
+  height: 600px;
+}
+.media-body{
+  width: 100%;
+}
+.media-heading{
+  width: 100%;
+  padding-top: 1em;
+}
+.edit{
+  float: right;
+  color: blue;
+  font-size: .8em;
 }

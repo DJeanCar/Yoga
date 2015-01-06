@@ -52,10 +52,10 @@
                 <li><a href="#">Resources</a></li>
                 <li><a href="#">Profiles</a></li>
                 <li class="inner-both-btn">
-                  <div>
-                    <a href="/login" class="btn btn-orange btn-sm btn-sm-customize color-white">Login</a>
-                    <a href="/register" class="btn btn-alizarin btn-sm btn-sm-customize color-white">Register</a>
-                  </div>
+                  
+                    {% block login %}
+                    {% endblock %}
+                  
                 </li>
                 
               </ul>
@@ -78,7 +78,7 @@
                 
                 {% endblock %}
                 <span>
-                  <button class="btn btn-warning btn-warning-customize btn-md btn-md-customize">POST CLASS</button>
+                  <a href="/post-class" class="btn btn-warning btn-warning-customize btn-md btn-md-customize">POST CLASS</a>
                   <button class="btn btn-info btn-info-customize btn-md btn-md-customize">DONATE</button>
                 </span>
               </div>
@@ -107,12 +107,21 @@
     </footer>
 
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
-        <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
-        <script src="{% static 'js/vendor/masonry.js' %}"></script>
+      <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+      <script src="{% static 'js/vendor/masonry.js' %}"></script>
         
-        <script src="{% static 'js/main.js' %}"></script>
+      <script src="{% static 'js/main.js' %}"></script>
+      <script type="text/javascript">
+        $('#popover').popover({
+          html: 'true',
+          title: '<div class="text-center"><b>Wellcome {{user.full_name}}</b><p>{% if user.premium %}<span class="font-size-peq">Premium Membership</span>{% else %} <span class="font-size-peq">Basic Membership</span> {% endif %}</p></div>',
+          content: '<ul class="list-profile"><li><a href="/profile">Profile</a></li><li><a href="/logout">Logout</a></li></ul>'
+        });
+      </script>
+      {% block js %}
+      {% endblock %}
     </body>
 </html>

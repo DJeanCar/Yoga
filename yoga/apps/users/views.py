@@ -44,3 +44,7 @@ class PremiumUserView(LoginRequiredMixin, TemplateView):
 
 	template_name = 'users/premium.html'
 	login_url = '/login/'
+
+class ProfileUserView(TemplateView):
+
+	template_name = 'users/profile.html'

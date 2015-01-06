@@ -1,28 +1,108 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-</head>
-<body>
-	<h1>CreateClass</h1>
-	<form method="POST" enctype="multipart/form-data">
-		{% csrf_token %}
-		<label>Title Class</label>
-		{{ form.title }}
-		<label>Address</label>
-		{{ form.address }}
-		<label>Date</label>
-		{{ form.date }}
-		<label>Time</label>
-		{{ form.time }}
-		{% if user.premium %}
-			<label>Image</label>
-			{{ form.image }}
-		{% endif %}
-		<label>Description</label>
-		{{ form.description }}
-		<input type="submit" value="Post Class">
-	</form>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% load static from staticfiles %}
+
+{% block style %}
+
+<style type="text/css">
+	
+	#subheader{
+		padding-top: 80px;
+	}
+
+	.panel-default{
+		border-color: rgba(221, 221, 221, 0);
+		border-radius: 0;
+		background-color: #ecf0f1;
+	}
+
+	.margen-footer{
+		margin-top: 20em;
+	}
+
+</style>
+
+{% endblock %}
+
+{% block login %}
+
+{% if user.is_authenticated %}
+	<div class="user-login" >
+		<img src="{{MEDIA_URL}}{{user.avatar}}" class="img-circle" id="popover" data-container="body" data-toggle="popover" data-placement="bottom">
+		<a href="#" style="color:#B8CF2A;"><b>{{ user.full_name }}</b></a>
+	</div>
+   
+{% else %}
+	<div >
+		<a href="/login" class="btn btn-orange btn-sm btn-sm-customize color-white">Login</a>
+		<a href="/register" class="btn btn-alizarin btn-sm btn-sm-customize color-white">Register</a>
+	</div>
+    
+{% endif %}
+
+
+{% endblock %}
+
+{% block main %}
+	
+	
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 inner-both-lr">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						
+						<h2 class="text-center inner-both-1 color-asbestos"><b>Post a Class<b></h2>
+						<form method="POST">
+							{% csrf_token %}
+							<div class="col-md-10 col-md-offset-1">
+								<div class="form-group">
+									{{ form.title }}
+								    {{ form.title.errors }}
+								</div>
+								<div class="form-group">
+									{{ form.address }}
+								    {{ form.address.errors }}
+								</div>
+								<div class="form-group">
+									<div class="row">
+										<div class="col-md-6" style="padding-right:7px">
+											{{ form.date }}
+											{{ form.date.errors }}
+										</div>
+										<div class="col-md-6" style="padding-left:7px">
+											{{ form.time }}
+											{{ form.time.errors }}
+										</div>
+									</div>
+								</div>
+								<div class="form-group">
+									{% if user.premium %}
+										{{ form.image }}
+									{% endif %}
+								</div>
+								<div class="form-group">
+									{{ form.description }}
+									{{ form.description.errors }}
+								</div>
+
+								
+							</div>
+							
+							<div class="col-md-10 col-md-offset-1 text-center">
+								<input type="submit" class="btn btn-danger btn-lg btn-lg-customize margen-top-1 margen-bottom-1" value="POST CLASS">
+							</div>
+						</form>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+
+	
+{% endblock %}
+
+
