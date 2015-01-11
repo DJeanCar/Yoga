@@ -16,6 +16,9 @@ DATABASES = {
     }
 }
 
+MEDIA_URL = 'http://localhost:8000/media/'
+MEDIA_ROOT = BASE_DIR.child('media')
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR.child('static')]
 MEDIA_URL = 'http://localhost:8000/media/'

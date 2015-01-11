@@ -1,9 +1,4 @@
-// Using Masonry to adjustable columns
-var container = document.querySelector('#contenedor');
 
-var msnry = new Masonry( container, {
-  itemSelector: '.grid-25'
-});
 
 // Search for yoga
 $( "#search" ).on('keypress', searchingYoga);

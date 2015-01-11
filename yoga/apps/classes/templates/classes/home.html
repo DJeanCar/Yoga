@@ -10,6 +10,7 @@
 {% block subtitle %}
 <span class="color-asbestos lasted-subtitle">LASTED CLASS</span>
 {% endblock %}
+
         
 {% block main %}
         <section>
@@ -473,6 +474,19 @@
             </div>
           </div>
         </section>
+
+{% endblock %}
+
+{% block js %}
+
+<script type="text/javascript">
+  // Using Masonry to adjustable columns
+  var container = document.querySelector('#contenedor');
+
+  var msnry = new Masonry( container, {
+    itemSelector: '.grid-25'
+  });
+</script>
 
 {% endblock %}
 

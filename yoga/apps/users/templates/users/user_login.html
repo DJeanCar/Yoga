@@ -31,6 +31,9 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<h2 class="text-center inner-both-1 color-asbestos"><b>Login<b></h2>
+						{% if error %}
+							<h2>Email or Password Incorrects</h2>
+						{% endif %}
 						<form method="POST">
 							{% csrf_token %}
 							<div class="col-md-8 col-md-offset-2">

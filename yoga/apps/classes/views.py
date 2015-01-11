@@ -18,3 +18,19 @@ class CreateClassView(LoginRequiredMixin, CreateView):
 	def form_valid(self, form):
 		form.instance.user = self.request.user
 		return super(CreateClassView, self).form_valid(form)
+
+class AboutView(TemplateView):
+
+	template_name = 'classes/about.html'
+
+class ProfilesView(TemplateView):
+
+	template_name = 'classes/profiles.html'
+
+class ResourcesView(TemplateView):
+
+	template_name = 'classes/resources.html'
+
+class CalendarView(TemplateView):
+
+	template_name = 'classes/calendar.html'
