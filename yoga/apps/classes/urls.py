@@ -1,9 +1,11 @@
 from django.conf.urls import patterns, url
-from .views import CreateClassView, HomeView, AboutView, ProfilesView
+from .views import CreateClassView, HomeView, AboutView, ProfilesView, ResourcesView, CalendarView
 
 urlpatterns = patterns('',
 	url(r'^$', HomeView.as_view()),
 	url(r'^about/$', AboutView.as_view()),
 	url(r'^profiles/$', ProfilesView.as_view()),
+	url(r'^resources/$', ResourcesView.as_view()),
+	url(r'^calendar/$', CalendarView.as_view()),
 	url(r'^post-class/$', CreateClassView.as_view()),
 )

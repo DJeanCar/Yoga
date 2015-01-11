@@ -51,6 +51,17 @@ h6 {
 .btn-follow:hover{
   color: white;
 }
+.btn-follow-2{
+  color: white;
+  background-color: black;
+  border: 2px !important;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 2px 10px;
+}
+.btn-follow-2:hover{
+  color: white; 
+}
 .btn-lg-customize{
   padding: 10px 48px;
   border-radius: 2px;
@@ -184,6 +195,13 @@ h6 {
   background-color: #ddd;
   margin-bottom: 0;
 }
+.panel-profiles{
+  border: 1px solid #ddd;
+  padding: 1em;
+}
+.panel-resources{
+  border: 1px solid #ddd;
+}
 .title-class-day-free {
   color: #d35400;
   font-size: 1.4em;
@@ -224,6 +242,14 @@ h6 {
   margin-top: 0.8em;
   background-size: cover;
 }
+.img-profiles{
+  width: 100px;
+  height: 100px;
+}
+.img-resource{
+  width: 200px;
+  border-radius: 2px;
+}
 .panel-body-customize {
   padding-left: 0;
   padding-right: 0;
@@ -246,6 +272,9 @@ h6 {
 }
 .font-size-peq{
   font-size: 0.8em;
+}
+.font-size-peq-2{
+  font-size: 0.9em;
 }
 .free-table{
   background-color: #ecf0f1;
@@ -340,6 +369,12 @@ h6 {
 .col-profile{
   border-left: 1px solid #bdc3c7;
   height: 600px;
+}
+.col-profiles:nth-child(2n){
+  padding-left: 7px;
+}
+.col-profiles:nth-child(2n+1){
+  padding-right: 7px;
 }
 .media-body{
   width: 100%;

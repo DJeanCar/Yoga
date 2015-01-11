@@ -26,3 +26,11 @@ class AboutView(TemplateView):
 class ProfilesView(TemplateView):
 
 	template_name = 'classes/profiles.html'
+
+class ResourcesView(TemplateView):
+
+	template_name = 'classes/resources.html'
+
+class CalendarView(TemplateView):
+
+	template_name = 'classes/calendar.html'
