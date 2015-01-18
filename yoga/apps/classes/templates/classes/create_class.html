@@ -36,7 +36,7 @@
 					<div class="panel-body">
 						
 						<h2 class="text-center inner-both-1 color-asbestos"><b>Post a Class<b></h2>
-						<form method="POST">
+						<form method="POST" enctype="multipart/form-data">
 							{% csrf_token %}
 							<div class="col-md-10 col-md-offset-1">
 								<div class="form-group">
@@ -47,6 +47,7 @@
 									{{ form.address }}
 								    {{ form.address.errors }}
 								</div>
+
 								<div class="form-group">
 									<div class="row">
 										<div class="col-md-6" style="padding-right:7px">
@@ -59,11 +60,11 @@
 										</div>
 									</div>
 								</div>
-								<div class="form-group">
 									{% if user.premium %}
+								<div class="form-group">
 										{{ form.image }}
-									{% endif %}
 								</div>
+									{% endif %}
 								<div class="form-group">
 									{{ form.description }}
 									{{ form.description.errors }}
