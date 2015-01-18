@@ -19,89 +19,20 @@
               <div class="grid-80">
                 <div class="row-customize">
                   <div id="contenedor">
-                    <div class="grid-25" data-name="Sunset Yoga on the Beach">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Sunday 10</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunset Yoga on the Beach</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Pol Grey</span>
-                          </p>
-                          <p class="hour-class">
-                            6:00 pm
-                          </p>
-                          <p class="text-class">
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 1 st Street</b></span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Monday 4</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Karma Yoga Mondays at Trio</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Carlos Doe</span>
-                          </p>
-                          <p class="hour-class">
-                            10:00 am
-                          </p>
-                          <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Wynwood</b></span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Thursday 6</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunrise Yoga on the Beach at 3rd St</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Andrea Yogini</span>
-                          </p>
-                          <p class="hour-class">
-                            8:00 am
-                          </p>
-                          <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 3st Street</b></span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
+                  {% for class in classes %}
+                    {% if class.image %}
+                      
                     <!-- class premium -->
                     <div class="grid-25">
                       <div class="panel panel-default panel-default-premium">
                         <div class="panel-heading panel-heading-premium">
-                          <p class="title-class-day-premium text-center">Saturday 8</p>
+                          <p class="title-class-day-premium text-center">{{ class.date|date:"l d" }}</p>
                         </div>
                         <div class="panel-body panel-body-customize">
-                          <p class="title-class margin-both">Karma Yoga Wednesday at Trio</p>
+                          <p class="title-class margin-both">{{ class.title }}</p>
                           <p class="teacher-class margin-both">
                             <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Carlos</span>
+                            <span class="color-carrot">{{ class.user.full_name }}</span>
                           </p>
                           <p class="hour-class margin-both">
                             10:00 am
@@ -111,354 +42,44 @@
                           </figure>  
                           
                           <p class="text-class margin-both">
-                            I am a paying subscriber an I can put pictures here. Pics will be cropped by thumb.php
+                            {{ class.description }}
                           </p>
                           <p class="location-class margin-both">
                             <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Wynwood</b></span>
+                            <span><b>{{ class.address }}</b></span>
                           </p>
                         </div>
                       </div>
                     </div>
-
+                    {% else %}
+  
                     <div class="grid-25">
                       <div class="panel panel-default">
                         <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Wednesday 12</p>
+                          <p class="title-class-day-free text-center">{{ class.date|date:"l d" }}</p>
                         </div>
                         <div class="panel-body">
-                          <p class="title-class">Sunrise Yoga on the Beach at 3rd St</p>
+                          <p class="title-class">{{ class.title }}</p>
                           <p class="teacher-class">
                             <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Andrea Yogini</span>
+                            <span class="color-carrot">{{ class.user.full_name }}</span>
                           </p>
                           <p class="hour-class">
                             7:00 am
                           </p>
                           <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
+                            {{ class.description }}
                           </p>
                           <p class="location-class">
                             <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 3st Street</b></span>
+                            <span><b>{{ class.address }}</b></span>
                           </p>
-                        </div>
-                        
+                        </div> 
                       </div>
                     </div>
+                    {% endif %}
 
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Thursday 13</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Fundraiser for St Jude Children's Hospital at Biscayne Park</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Tommy Perez</span>
-                          </p>
-                          <p class="hour-class">
-                            11:00 am
-                          </p>
-                          <p class="text-class">
-                            Donation Based
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Biscayne Park, Miami</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Monday 10</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunset Yoga on the Beach</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Pol Grey</span>
-                          </p>
-                          <p class="hour-class">
-                            6:00 pm
-                          </p>
-                          <p class="text-class">
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 1 st Street</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Sunday 16</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Monday Free Yoga at Synergy</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Jhon Doe</span>
-                          </p>
-                          <p class="hour-class">
-                            9:00 am
-                          </p>
-                          <p class="text-class">
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>South Beach</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-
-                    <!-- class premium -->
-                    <div class="grid-25">
-                      <div class="panel panel-default panel-default-premium">
-                        <div class="panel-heading panel-heading-premium">
-                          <p class="title-class-day-premium text-center">Monday 17</p>
-                        </div>
-                        <div class="panel-body panel-body-customize">
-                          <p class="title-class margin-both">Karma Yoga Wednesday at Trio</p>
-                          <p class="teacher-class margin-both">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Carlos</span>
-                          </p>
-                          <p class="hour-class margin-both">
-                            10:00 am
-                          </p>
-                          <figure class="img-class-premium">
-                            
-                          </figure>  
-                          
-                          <p class="text-class margin-both">
-                            I am a paying subscriber an I can put pictures here. Pics will be cropped by thumb.php
-                          </p>
-                          <p class="location-class margin-both">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Wynwood</b></span>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Wednesday 12</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunrise Yoga on the Beach at 3rd St</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Andrea Yogini</span>
-                          </p>
-                          <p class="hour-class">
-                            7:00 am
-                          </p>
-                          <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 3st Street</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Wednesday 12</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunrise Yoga on the Beach at 3rd St</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Andrea Yogini</span>
-                          </p>
-                          <p class="hour-class">
-                            7:00 am
-                          </p>
-                          <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 3st Street</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Wednesday 12</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunrise Yoga on the Beach at 3rd St</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Andrea Yogini</span>
-                          </p>
-                          <p class="hour-class">
-                            7:00 am
-                          </p>
-                          <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 3st Street</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Wednesday 12</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunrise Yoga on the Beach at 3rd St</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Andrea Yogini</span>
-                          </p>
-                          <p class="hour-class">
-                            7:00 am
-                          </p>
-                          <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 3st Street</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Wednesday 12</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunrise Yoga on the Beach at 3rd St</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Andrea Yogini</span>
-                          </p>
-                          <p class="hour-class">
-                            7:00 am
-                          </p>
-                          <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 3st Street</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Wednesday 12</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunrise Yoga on the Beach at 3rd St</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Andrea Yogini</span>
-                          </p>
-                          <p class="hour-class">
-                            7:00 am
-                          </p>
-                          <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 3st Street</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Wednesday 12</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunrise Yoga on the Beach at 3rd St</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Andrea Yogini</span>
-                          </p>
-                          <p class="hour-class">
-                            7:00 am
-                          </p>
-                          <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 3st Street</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-
-                    <div class="grid-25">
-                      <div class="panel panel-default">
-                        <div class="panel-heading">
-                          <p class="title-class-day-free text-center">Wednesday 12</p>
-                        </div>
-                        <div class="panel-body">
-                          <p class="title-class">Sunrise Yoga on the Beach at 3rd St</p>
-                          <p class="teacher-class">
-                            <span class="color-asbestos">with</span>
-                            <span class="color-carrot">Andrea Yogini</span>
-                          </p>
-                          <p class="hour-class">
-                            7:00 am
-                          </p>
-                          <p class="text-class">
-                            Join me for a beautiful sunrise Yoga and bla bla bal this is a recurrent class and the day has a different color
-                          </p>
-                          <p class="location-class">
-                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
-                            <span><b>Beach at 3st Street</b></span>
-                          </p>
-                        </div>
-                        
-                      </div>
-                    </div>
-
+                  {% endfor %}
                   </div>
 
                 </div>

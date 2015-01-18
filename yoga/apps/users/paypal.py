@@ -10,6 +10,12 @@ paypalrestsdk.configure({
         "client_secret": settings.PAYPAL_CLIENT_SECRET 
     })
 
+if settings.DEBUG:
+    return_url = 'http://localhost:8000/paypal/execute/'
+    cancel_url = 'http://localhost:8000/'
+else:
+    return_url = 'http://devcode.la/paypal/execute/'
+    cancel_url = 'http://devcode.la/'
 
 def paypal_create(request):
 	
@@ -21,8 +27,8 @@ def paypal_create(request):
 
 
         "redirect_urls": {
-            "return_url": 'http://localhost:8000/paypal/execute/',
-            "cancel_url": 'http://localhost:8000/' },
+            "return_url": return_url,
+            "cancel_url": cancel_url },
             
 
         "transactions": [{
