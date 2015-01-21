@@ -10,14 +10,21 @@
 		padding-top: 80px;
 	}
 
-	.panel-default{
-		border-color: rgba(221, 221, 221, 0);
-		border-radius: 0;
-		background-color: #ecf0f1;
-	}
-
 	.margen-footer{
 		margin-top: 20em;
+	}
+
+	.container{
+		width: 86%;
+	}
+
+	.panel-def{
+		border-color: rgb(4, 162, 226);
+		border-radius: 1px;
+	}
+
+	.col-padding{
+		padding: 0;
 	}
 
 </style>
@@ -25,4 +32,123 @@
 {% endblock %}
 
 {% block main %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel panel-default panel-def">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-md-12">
+							<h2 class="text-center color-asbestos"><b>Make a donation for the Free Yoga website</b></h2>
+							<p class="text-center color-asbestos" style="font-size:1.1em">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+						</div>
+					</div>
+					<div class="row margen-top-4 margen-bottom-4">
+						<div class="col-md-6 col-md-offset-3">
+							<div class="row">
+								<div class="col-md-6">
+									<form>
+										<label>Paypal one-time donation <span class="color-carrot">*</span></label>
+										<input type="text">
+										<label><small>Give a one-time donation</small></label>
+									</form>
+									<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+								</div>
+								<div class="col-md-6">
+									<form>
+										<div>
+											<label>Paypal monthly donation <span class="color-carrot">*</span></label>
+											<input type="text">
+											<label><small>Set-up a monthly donation</small></label>
+										</div>
+										<div>
+											<label>Months <span class="color-carrot">*</span></label>
+											<input type="text">
+										</div>
+										
+										
+									</form>
+									<form class="margen-top-medio" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHJwYJKoZIhvcNAQcEoIIHGDCCBxQCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYA3qV2eid+bPx5Rgc+Q/qJ3P3A3SpA9PyIaL2W4+dOJbkRimkCii5LkBPNS7rknd6Ge62pJ6U4OOF+S72mZyCVXT1uu/WhTL8M59TJXP5ntLgJ09+b2Tyi+hgFU5mevUJD8puTSr+bkvSyNzC5iujQTo4rVuxM61/Dzmo2n4VWXvzELMAkGBSsOAwIaBQAwgaQGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIPQVxmJjDgFSAgYC1lhpeAt/cpyRSmZ3XSU7e2GyMkjK8+TLCsj+/qUY7dHmkn/kfV52j5zqfc2/KyXG6kSCyk3snVq8nntwKBMo77Oe4cTDu9NUpEf1sB8aDSVW6pkzTtUUuJgKgC0Lh1lrBN2w36VVdFvLjp1wKGrXnRHiqjYGa0EkJBAiUwk6UfaCCA4cwggODMIIC7KADAgECAgEAMA0GCSqGSIb3DQEBBQUAMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTAeFw0wNDAyMTMxMDEzMTVaFw0zNTAyMTMxMDEzMTVaMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbTCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAwUdO3fxEzEtcnI7ZKZL412XvZPugoni7i7D7prCe0AtaHTc97CYgm7NsAtJyxNLixmhLV8pyIEaiHXWAh8fPKW+R017+EmXrr9EaquPmsVvTywAAE1PMNOKqo2kl4Gxiz9zZqIajOm1fZGWcGS0f5JQ2kBqNbvbg2/Za+GJ/qwUCAwEAAaOB7jCB6zAdBgNVHQ4EFgQUlp98u8ZvF71ZP1LXChvsENZklGswgbsGA1UdIwSBszCBsIAUlp98u8ZvF71ZP1LXChvsENZklGuhgZSkgZEwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tggEAMAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEFBQADgYEAgV86VpqAWuXvX6Oro4qJ1tYVIT5DgWpE692Ag422H7yRIr/9j/iKG4Thia/Oflx4TdL+IFJBAyPK9v6zZNZtBgPBynXb048hsP16l2vi0k5Q2JKiPDsEfBhGI+HnxLXEaUWAcVfCsQFvd2A1sxRr67ip5y2wwBelUecP3AjJ+YcxggGaMIIBlgIBATCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwCQYFKw4DAhoFAKBdMBgGCSqGSIb3DQEJAzELBgkqhkiG9w0BBwEwHAYJKoZIhvcNAQkFMQ8XDTE1MDEyMTIxMDUzMlowIwYJKoZIhvcNAQkEMRYEFBDRGaGFOX2IptAGBEdU1hmouKh3MA0GCSqGSIb3DQEBAQUABIGAlUPP/1zUpqxXcyPcPMgZ44QI4z2Vw7crQW1EfFd812vurjSU83hg9rWYlIs5rbafhlM7W8GxZ8jAkUAyR6BDSnoqXCnGeT7lOkSJbpudlg0CVH/dbwDDZC3rbEFB3wQvUhl7IG63AYSvL0+/to3m+45j+GOIVHC+gqT3jZ6N6YQ=-----END PKCS7-----
+">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+			<div class="col-lg-10 col-lg-offset-1 margen-top-1" style="margin-top:3em">
+				<div class="row">
+					<div class="col-lg-6 padding-right">
+						
+							<h4><b>Why should I make a donation?</b></h4>
+							<p  class="margen-top-1">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+							</p>
+						
+						
+					</div>
+					<div class="col-lg-6 padding-left">
+						
+							<div class="panel panel-default panel-custom">
+								<div class="panel-body">
+									<h4><b>Wish to donate in other way?</b></h4>
+									<p class="padding-left margen-top-medio">Contact Us in: <span style="color:blue">donaciones@freeyoga.com</span></p>
+								</div>
+							</div>
+						
+					</div>
+					
+				</div>
+				<div class="row margen-top-1" style="margin-top:3em">
+					<div class="col-lg-6 padding-right">
+						
+							<h4><b>How much can I donate?</b></h4>
+							<p class="margen-top-1">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+								quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+								consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+								cillum
+							</p>
+						
+					</div>
+					<div class="col-lg-6 padding-left">
+						<div class="padding-both-lr">
+							<h4><b>Can I make a donation in cash?</b></h4>
+							<p class="margen-top-1">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+								tempor incididunt ut labore et dolore magna
+							</p>
+						</div>
+							
+						
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+</div>
+
 {% endblock %}

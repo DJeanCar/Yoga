@@ -36,11 +36,32 @@ h6 {
 .margen-top-1{
   margin-top: 1em;
 }
+.margen-top-4{
+  margin-top: 4em;
+}
+.margen-top-medio{
+  margin-top: 0.5em;
+}
 .margen-bottom-1{
   margin-bottom: 1em;
 }
+.margen-bottom-4{
+  margin-bottom: 4em;
+}
 .btn-sm-customize {
   padding: 6px 20px;
+}
+.btn-upgrade{
+  border-radius: 2px;
+background-color: rgb(128, 173, 60);
+color: white;
+border-bottom: 2px solid rgb(58, 178, 58);
+border-top: 1px solid rgb(58, 178, 58);
+border-left: 1px solid rgb(58, 178, 58);
+border-right: 1px solid rgb(58, 178, 58);
+}
+.btn-upgrade:hover{
+  color: white;
 }
 .btn-follow{
   background-color: black;
@@ -195,6 +216,13 @@ h6 {
   background-color: #ddd;
   margin-bottom: 0;
 }
+.panel-custom{
+  background-color: #ecf0f1;
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 2px;
+  padding: 1em 2em;
+}
 .panel-profiles{
   border: 1px solid #ddd;
   padding: 1em;
@@ -237,7 +265,6 @@ h6 {
   font-size: 1.4em;
 }
 .img-class-premium {
-  background: url("../img/yoga.jpg") center;
   height: 130px;
   margin-top: 0.8em;
   background-size: cover;
@@ -289,6 +316,15 @@ h6 {
 .padding-both{
   padding-top: 1em;
   padding-bottom: 1em;
+}
+.padding-both-lr{
+  padding: 0 2.5em;
+}
+.padding-right{
+  padding-right: 2.5em;
+}
+.padding-left{
+  padding-left: 2.5em;
 }
 .width-1{
   width: 210px !important;
@@ -392,4 +428,8 @@ h6 {
   padding-top: 10px;
   padding-right: 5px;
   padding-left: 5px;
+}
+.inner-upgrade{
+  padding-top: 2em;
+  padding-bottom: 4em;
 }

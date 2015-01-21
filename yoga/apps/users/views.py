@@ -58,3 +58,7 @@ class PremiumUserView(LoginRequiredMixin, TemplateView):
 class ProfileUserView(TemplateView):
 
 	template_name = 'users/profile.html'
+
+class EditProfileUserView(TemplateView):
+
+	template_name = 'users/edit.html'
