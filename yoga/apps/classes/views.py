@@ -34,3 +34,7 @@ class ResourcesView(TemplateView):
 class CalendarView(TemplateView):
 
 	template_name = 'classes/calendar.html'
+
+class DonateView(TemplateView):
+
+	template_name = 'classes/donate.html'

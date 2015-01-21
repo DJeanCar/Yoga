@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, url
-from .views import CreateClassView, HomeView, AboutView, ProfilesView, ResourcesView, CalendarView
+from .views import CreateClassView, HomeView, AboutView, ProfilesView, ResourcesView, CalendarView, DonateView
 
 urlpatterns = patterns('',
 	url(r'^$', HomeView.as_view()),
@@ -8,4 +8,5 @@ urlpatterns = patterns('',
 	url(r'^resources/$', ResourcesView.as_view()),
 	url(r'^calendar/$', CalendarView.as_view()),
 	url(r'^post-class/$', CreateClassView.as_view()),
+	url(r'^donate/$', DonateView.as_view()),
 )
