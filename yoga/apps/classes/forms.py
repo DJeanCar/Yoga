@@ -31,12 +31,7 @@ class CreateClassForm(forms.ModelForm):
 					'class' : 'form-control form-control-customize-2',
 					'placeholder' : 'Time'
 				}),
-			'image' : forms.TextInput(attrs = 
-				{
-					'type' : 'image',
-					'class' : 'form-control form-control-customize-2',
-					'placeholder' : 'Submit Image'
-				}),
+
 			'description' : forms.Textarea(attrs = 
 				{ 
 					'rows' : 10,

@@ -4,10 +4,16 @@ from django.views.generic import CreateView, TemplateView
 from braces.views import LoginRequiredMixin
 
 from .forms import CreateClassForm
+from .models import Class
 
 class HomeView(TemplateView):
 
 	template_name = 'classes/home.html'
+
+	def get_context_data(self, **kwargs):
+		context = super(HomeView, self).get_context_data(**kwargs)
+		context['classes'] = Class.objects.all()
+		return context
 
 class CreateClassView(LoginRequiredMixin, CreateView):
 
