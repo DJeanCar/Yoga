@@ -5,31 +5,66 @@
 {% block style %}
 
 <style type="text/css">
-	
 	#subheader{
 		padding-top: 80px;
+	}
+
+	.panel-default{
+		border-color: rgba(221, 221, 221, 0);
+		border-radius: 0;
+		background-color: #ecf0f1;
 	}
 
 	.margen-footer{
 		margin-top: 20em;
 	}
 
-	.container{
-		width: 86%;
-	}
-
-	.panel-def{
-		border-color: rgb(4, 162, 226);
-		border-radius: 1px;
-	}
-
-	.col-padding{
-		padding: 0;
-	}
 
 </style>
 
 {% endblock %}
 
 {% block main %}
+
+<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 inner-both-lr">
+				<div class="panel panel-default">
+					<div class="panel-body">
+						<h2 class="text-center inner-both-1 color-asbestos"><b>Edit Profile<b></h2>
+						{% if error %}
+							<h2>Email or Password Incorrects</h2>
+						{% endif %}
+						<form method="POST">
+							{% csrf_token %}
+							<div class="col-md-10 col-md-offset-1">
+								<div class="form-group text-center">
+									<input type="image" src="{% static 'img/user.jpg' %}" class="img-circle" >
+									<div>
+										<label>Upload Photo</label>
+									</div>
+									
+								</div>
+								<div class="form-group">
+								    <input type="text" class="form-control form-control-customize-2" id="id_password" placeholder="Email" value="{{user.email}}">
+								</div>
+								<div class="form-group">
+								    <input type="text" class="form-control form-control-customize-2" placeholder="Full Name" value="{{user.full_name}}">
+								</div>
+								<div class="form-group">
+								    <input type="text" class="form-control form-control-customize-2" placeholder="Location" value="{{user.location}}">
+								</div>
+								
+							</div>
+							<div class="col-md-10 col-md-offset-1 text-center">
+								<input type="submit" class="btn btn-danger btn-lg btn-lg-customize margen-top-1 margen-bottom-1" value="SAVE">
+							</div>
+						</form>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
 {% endblock %}

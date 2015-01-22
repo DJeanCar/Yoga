@@ -41,6 +41,11 @@ class CalendarView(TemplateView):
 
 	template_name = 'classes/calendar.html'
 
+	def get_context_data(self, **kwargs):
+		context = super(CalendarView, self).get_context_data(**kwargs)
+		context['classes'] = Class.objects.all()
+		return context
+
 class DonateView(TemplateView):
 
 	template_name = 'classes/donate.html'
