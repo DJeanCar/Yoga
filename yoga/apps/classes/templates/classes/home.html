@@ -2,6 +2,23 @@
 
 {% load static from staticfiles %}
 
+{% block style %}
+
+<style type="text/css">
+
+  .row-customize{
+    padding-bottom: 1em;
+  }
+
+  footer{
+    margin-top: 0;
+  }
+
+</style>
+
+{% endblock %}
+
+
 {% block header %}
 <div id="header">           
 </div>
@@ -24,7 +41,7 @@
                       
                     <!-- class premium -->
                     <div class="grid-25">
-                      <div class="panel panel-default panel-default-premium">
+                      <div class="panel panel-default panel-def-class panel-default-premium" data-toggle="modal" data-target="#myModal">
                         <div class="panel-heading panel-heading-premium">
                           <p class="title-class-day-premium text-center">{{ class.date|date:"l d" }}</p>
                         </div>
@@ -35,7 +52,7 @@
                             <span class="color-carrot">{{ class.user.full_name }}</span>
                           </p>
                           <p class="hour-class margin-both">
-                            10:00 am
+                            {{ class.time }}
                           </p>
                           <figure class="img-class-premium">
                             <img src="{{MEDIA_URL}}{{class.image}}" width="100%" height="130px">
@@ -54,7 +71,7 @@
                     {% else %}
   
                     <div class="grid-25">
-                      <div class="panel panel-default">
+                      <div class="panel panel-default panel-def-class" data-toggle="modal" data-target="#myModal">
                         <div class="panel-heading">
                           <p class="title-class-day-free text-center">{{ class.date|date:"l d" }}</p>
                         </div>
@@ -65,7 +82,7 @@
                             <span class="color-carrot">{{ class.user.full_name }}</span>
                           </p>
                           <p class="hour-class">
-                            7:00 am
+                            {{ class.time }}
                           </p>
                           <p class="text-class">
                             {{ class.description }}
@@ -95,6 +112,42 @@
             </div>
           </div>
         </section>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header panel-heading-premium">
+        <h4 class="modal-title" id="myModalLabel">Saturday 8</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-7">
+            <p class="title-class">Karma Yoga Wednesday at Trio</p>
+            <p class="teacher-class">
+              <span class="color-asbestos">with</span>
+              <span class="color-carrot">Carlos</span>
+            </p>
+            <p class="hour-class">
+              10.00 a.m.
+            </p>
+             
+          </div>
+
+        </div>
+        <figure class="img-class-premium img-modal">
+              <img src="{% static 'img/yoga.jpg' %}" width="100%" height="130px" class="img-modal-true">
+            </figure> 
+        
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}
 

@@ -11,6 +11,9 @@ h6 {
   margin: 0;
   padding: 0;
 }
+a:hover{
+  text-decoration: none;
+}
 .lasted-subtitle {
   font-weight: 900;
   font-size: 1.4em;
@@ -257,6 +260,13 @@ border-right: 1px solid rgb(58, 178, 58);
 .panel-default-premium {
   border-color: #000 !important;
 }
+.panel-def-class:hover{
+  background-color: #E5E5E5;
+  cursor: pointer;
+  -ms-transform: scale(0.99,0.99); /* IE 9 */
+    -webkit-transform: scale(0.99,0.99); /* Chrome, Safari, Opera */
+    transform: scale(0.99,0.99);
+}
 .panel-heading-premium {
   background-color: #f00 !important;
 }
@@ -276,6 +286,16 @@ border-right: 1px solid rgb(58, 178, 58);
 .img-resource{
   width: 200px;
   border-radius: 2px;
+}
+.img-login{
+  width: 30px;
+}
+.img-modal{
+  overflow: hidden;
+}
+.img-modal>img{
+  position: absolute !important;
+  left: 0;
 }
 .panel-body-customize {
   padding-left: 0;
@@ -432,4 +452,18 @@ border-right: 1px solid rgb(58, 178, 58);
 .inner-upgrade{
   padding-top: 2em;
   padding-bottom: 4em;
+}
+/* Modal */
+.modal-dialog{
+  width: 400px;
+  margin: 100px auto;
+}
+.modal-content{
+  border-radius: 3px;
+  border: 2px solid #000;
+}
+.modal-header{
+  padding: 3px 15px;
+  text-align: center;
+  color: white;
 }

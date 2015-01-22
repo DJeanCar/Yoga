@@ -23,7 +23,7 @@
 {% endblock %}
 
 {% block subtitle %}
-<span class="color-asbestos lasted-subtitle" id="cal">ENERO</span>               
+<span class="color-asbestos lasted-subtitle" id="cal"></span>               
 {% endblock %}
 
 {% block main %}
@@ -38,7 +38,7 @@
                       
                     <!-- class premium -->
                     <div class="grid-25">
-                      <div class="panel panel-default panel-default-premium">
+                      <div class="panel panel-default panel-def-class panel-default-premium">
                         <div class="panel-heading panel-heading-premium">
                           <p class="title-class-day-premium text-center">{{ class.date|date:"l d" }}</p>
                         </div>
@@ -68,7 +68,7 @@
                     {% else %}
   
                     <div class="grid-25">
-                      <div class="panel panel-default">
+                      <div class="panel panel-default panel-def-class">
                         <div class="panel-heading">
                           <p class="title-class-day-free text-center">{{ class.date|date:"l d" }}</p>
                         </div>

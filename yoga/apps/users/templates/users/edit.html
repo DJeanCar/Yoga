@@ -32,13 +32,11 @@
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<h2 class="text-center inner-both-1 color-asbestos"><b>Edit Profile<b></h2>
-						{% if error %}
-							<h2>Email or Password Incorrects</h2>
-						{% endif %}
 						<form method="POST">
 							{% csrf_token %}
 							<div class="col-md-10 col-md-offset-1">
 								<div class="form-group text-center">
+
 									<input type="image" src="{% static 'img/user.jpg' %}" class="img-circle" >
 									<div>
 										<label>Upload Photo</label>
