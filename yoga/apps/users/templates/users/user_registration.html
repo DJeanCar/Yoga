@@ -30,55 +30,115 @@
 <div class="container">
 		<div class="row">
 			<div class="col-lg-8 col-lg-offset-2 inner-both-lr">
+				<ul class="nav nav-default nav-tabs" role="tablist" id="myTab">
+					<li role="presentation" class="active" id="but-paso1"><a href="#paso1" aria-controls="paso1" role="tab" data-toggle="tab">Paso 1</a></li>
+					<li role="presentation" id="but-paso2"><a href="#paso2" aria-controls="paso2" role="tab" data-toggle="tab">Paso 2</a></li>
+					<!--<a href="#paso1" data-toggle="tab">
+						<div class="pasos pasos-1 text-center">
+							Paso 1
+						</div>
+					</a>
+					<a href="#paso2" data-toggle="tab" >
+						<div class="pasos pasos-2 text-center">
+							Paso 2
+						</div>
+					</a>-->
+					
+				</ul>
 				<div class="panel panel-default">
 					<div class="panel-body">
 						<h2 class="text-center inner-both-1 color-asbestos"><b>Register<b></h2>
-						<form method="POST">
-							{% csrf_token %}
-							<div class="col-md-10 col-md-offset-1">
-								<div class="form-group">
-									{{ form.full_name }}
-								    {{ form.full_name.errors }}
-								</div>
-								<div class="form-group">
-									{{ form.email }}
-								    {{ form.email.errors }}
-								</div>
-								<div class="form-group">
-									{{ form.password }}
-									{{ form.password.errors }}
-								</div>
-								<div class="form-group">
-									{{ form.location }}
-								    {{ form.location.errors }}
-								</div>
+						<div class="tab-content">
+						
+						  	<div role="tabpanel" class="tab-pane active" id="paso1">
+						  		<form method="POST">
+									{% csrf_token %}
+									<div class="col-md-10 col-md-offset-1">
+										<div class="form-group">
+											{{ form.full_name }}
+										    {{ form.full_name.errors }}
+										</div>
+										<div class="form-group">
+											{{ form.email }}
+										    {{ form.email.errors }}
+										</div>
+										<div class="form-group">
+											{{ form.password }}
+											{{ form.password.errors }}
+										</div>
+									</div>
+									<div class="col-md-10 col-md-offset-1">
+										
+										<div class="radio margen-bottom-1">
+											
+										    <input type="checkbox" id="optionsRadios1" checked>
+										    <label>I Want to be at the directory?</label>
+										 
+										  
+										</div>
+									</div>
+									<div class="col-md-10 col-md-offset-1 text-center">
+										<a href="#paso2" aria-controls="paso2" role="tab" data-toggle="tab" class="btn btn-warning btn-lg btn-lg-customize margen-top-1 margen-bottom-1" id="next">NEXT</a>
+									</div>
+									
+								</form>
 							</div>
-							<div class="col-md-10 col-md-offset-1">
-								
-								<div class="radio">
-								  <span class="font-size-1">I am a:&nbsp;&nbsp;&nbsp;&nbsp;</span>
-								  <label>
-								    <input type="radio" name="teacher" id="optionsRadios1">
-								    Teacher
-								  </label>
-								  <label>
-								    <input type="radio" name="student" id="optionsRadios1">
-								    Student
-								  </label>
+
+						  
+							<div role="tabpanel" class="tab-pane" id="paso2">
+							  	<form method="POST">
+							  		<div class="col-md-10 col-md-offset-1">
+									  	<div class="form-group text-center">
+											<input type="image" src="{% static 'img/user.jpg' %}" class="img-circle">
+											<div>
+												<label>Upload your Photo</label>
+											</div>
+										</div>
+									</div>
+							  		<div class="col-md-10 col-md-offset-1">
+									  	<div class="form-group">
+											{{ form.location }}
+											{{ form.location.errors }}
+										</div>
+									</div>
+								</form>
+								<div class="col-md-10 col-md-offset-1 text-center">
+									<a href="#paso1" aria-controls="paso1" role="tab" data-toggle="tab" class="btn btn-warning btn-lg btn-lg-customize margen-top-1 margen-bottom-1" id="back">BACK</a>
+									<input type="submit" class="btn btn-danger btn-lg btn-lg-customize margen-top-1 margen-bottom-1" value="REGISTER">
 								</div>
-							</div>
-							<div class="col-md-10 col-md-offset-1 text-center">
-								<input type="submit" class="btn btn-danger btn-lg btn-lg-customize margen-top-1 margen-bottom-1" value="REGISTER">
-							</div>
-						</form>
+							</div> 
+
+						</div>
 					</div>
 				</div>
+				
+						
 				
 			</div>
 		</div>
 	</div>
 
+	
 
 
 
+
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+	$('#myTab a').click(function (e) {
+	  e.preventDefault()
+	  $(this).tab('show')
+	});
+
+	$('#next').on('click', function(){
+		$('#but-paso2').addClass('active');
+		$('#but-paso1').removeClass('active');
+	});
+	$('#back').on('click', function(){
+		$('#but-paso1').addClass('active');
+		$('#but-paso2').removeClass('active');
+	});
+</script>
 {% endblock %}
