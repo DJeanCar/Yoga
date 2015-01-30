@@ -62,3 +62,7 @@ class ProfileUserView(TemplateView):
 class EditProfileUserView(TemplateView):
 
 	template_name = 'users/edit.html'
+
+class RegainAccessUserView(TemplateView):
+
+	template_name = 'users/regain_access.html'
