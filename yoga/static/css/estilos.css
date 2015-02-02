@@ -20,10 +20,10 @@ a:hover{
 }
 .subtitle-resource{
   margin-top: 1em;
-  margin-bottom: 1em;
-  padding-bottom: .5em;
-  border-bottom: 2px solid #000;
-  width: 50%;
+margin-bottom: 1em;
+padding-bottom: .5em;
+border-bottom: 2px solid rgba(0, 0, 0, 0.18);
+width: 24%;
 }
 .inner-both-btn {
   padding-top: 0.7em;
@@ -465,7 +465,7 @@ border-right: 1px solid rgb(58, 178, 58);
 }
 .col-profile{
   border-left: 1px solid #bdc3c7;
-  height: 600px;
+
 }
 .col-profiles:nth-child(2n){
   padding-left: 7px;
@@ -508,3 +508,10 @@ border-right: 1px solid rgb(58, 178, 58);
   text-align: center;
   color: white;
 }
+.contenido{
+  padding-right: 1em;
+}
+.col-md-4-class{
+  padding-right: 0;
+}
+

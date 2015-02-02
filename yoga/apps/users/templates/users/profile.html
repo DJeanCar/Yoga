@@ -10,15 +10,10 @@
 		padding-top: 80px;
 	}
 
-	.panel-default{
-		border-color: rgba(221, 221, 221, 0);
-		border-radius: 0;
-		background-color: #ecf0f1;
-	}
-
 	.margen-footer{
 		margin-top: 0em;
 	}
+
 
 </style>
 
@@ -40,7 +35,7 @@
 				  </a>
 				  <div class="media-body">
 				    <h4 class="media-heading"><b>{{ user.full_name}}</b><a href="/edit"><span class="edit">[edit profile]</span></a></h4>
-				    <p>STUDENT</p>
+				    <!--<p>STUDENT</p>-->
 				  </div>
 				</div>
 				<div>
@@ -149,6 +144,120 @@
 						<p class="text-center">Jhon Doe</p>
 					</div>
 				</div>
+
+				<h2 class="margen-top-1"><b>MY CLASSES:</b></h2>
+
+				<div class="contenido">
+				
+				<div class="row margen-top-1">
+
+					<div class="col-md-4 col-md-4-class">
+						<div class="panel panel-default panel-def-class" data-toggle="modal" data-target="#myModal">
+                        <div class="panel-heading">
+                          <p class="title-class-day-free text-center">Saturday 1</p>
+                        </div>
+                        <div class="panel-body">
+                          <p class="title-class">Lorem ipsun</p>
+                          <p class="teacher-class">
+                            <span class="color-asbestos">with</span>
+                            <span class="color-carrot">John Doe</span>
+                          </p>
+                          <p class="hour-class">
+                            7:00 am
+                          </p>
+                          <p class="text-class">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+                          <p class="location-class">
+                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
+                            <span><b>Primavera</b></span>
+                          </p>
+                        </div> 
+                      </div>
+					</div>
+
+					<div class="col-md-4 col-md-4-class">
+						<div class="panel panel-default panel-def-class" data-toggle="modal" data-target="#myModal">
+                        <div class="panel-heading">
+                          <p class="title-class-day-free text-center">Saturday 1</p>
+                        </div>
+                        <div class="panel-body">
+                          <p class="title-class">Lorem ipsun</p>
+                          <p class="teacher-class">
+                            <span class="color-asbestos">with</span>
+                            <span class="color-carrot">John Doe</span>
+                          </p>
+                          <p class="hour-class">
+                            7:00 am
+                          </p>
+                          <p class="text-class">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+                          <p class="location-class">
+                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
+                            <span><b>Primavera</b></span>
+                          </p>
+                        </div> 
+                      </div>
+					</div>
+
+					<div class="col-md-4 col-md-4-class">
+						<div class="panel panel-default panel-def-class" data-toggle="modal" data-target="#myModal">
+                        <div class="panel-heading">
+                          <p class="title-class-day-free text-center">Saturday 1</p>
+                        </div>
+                        <div class="panel-body">
+                          <p class="title-class">Lorem ipsun</p>
+                          <p class="teacher-class">
+                            <span class="color-asbestos">with</span>
+                            <span class="color-carrot">John Doe</span>
+                          </p>
+                          <p class="hour-class">
+                            7:00 am
+                          </p>
+                          <p class="text-class">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+                          <p class="location-class">
+                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
+                            <span><b>Primavera</b></span>
+                          </p>
+                        </div> 
+                      </div>
+					</div>
+
+					<div class="col-md-4 col-md-4-class">
+						<div class="panel panel-default panel-def-class" data-toggle="modal" data-target="#myModal">
+                        <div class="panel-heading">
+                          <p class="title-class-day-free text-center">Saturday 1</p>
+                        </div>
+                        <div class="panel-body">
+                          <p class="title-class">Lorem ipsun</p>
+                          <p class="teacher-class">
+                            <span class="color-asbestos">with</span>
+                            <span class="color-carrot">John Doe</span>
+                          </p>
+                          <p class="hour-class">
+                            7:00 am
+                          </p>
+                          <p class="text-class">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.
+                          </p>
+                          <p class="location-class">
+                            <span class="glyphicon glyphicon-map-marker color-silver"></span>
+                            <span><b>Primavera</b></span>
+                          </p>
+                        </div> 
+                      </div>
+					</div>
+
+				</div>
+				</div>
+
 			</div>
 		</div>
 	</div>
@@ -167,7 +276,7 @@
 				  </a>
 				  <div class="media-body">
 				    <h4 class="media-heading"><b>{{ user.full_name }}</b><a href="/edit"><span class="edit">[edit profile]</span></a></h4>
-				    <p>TEACHER/{% if user.premium %}PREMIUM MEMBERSHIP{% else %}BASIC MEMBERSHIP{% endif %}</p>
+				    <!--<p>TEACHER/{% if user.premium %}PREMIUM MEMBERSHIP{% else %}BASIC MEMBERSHIP{% endif %}</p>-->
 				    <p>
 				    	<a href="" class="btn btn-follow btn-xs"><span class="glyphicon glyphicon-plus-sign"></span>&nbsp;<b>Follow</b></a>
 				    </p>
